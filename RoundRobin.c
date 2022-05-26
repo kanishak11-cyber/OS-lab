@@ -1,4 +1,7 @@
 // WAP to implement Round Robin scheduling
+// Theory:
+// Setting the quantum too short, increases the overhead and lowers the CPU efficiency, but setting it too long may cause poor response to short processes.
+// Average waiting time under the RR policy is often long.
 #include<stdio.h>
 void findWaitingTime(int processes[], int n,int bt[], int wt[], int quantum)
 {
@@ -64,3 +67,15 @@ int main()
     return 0;
 
 }
+
+// Output:
+// image
+
+// Advantages:
+// 1. Every process gets an equal share of the CPU.
+// 2. RR is cyclic in nature, so there is no starvation.
+
+// Disadvantages:
+
+// 1. Setting the quantum too short, increases the overhead and lowers the CPU efficiency, but setting it too long may cause poor response to short processes.
+// 2. Average waiting time under the RR policy is often long.
